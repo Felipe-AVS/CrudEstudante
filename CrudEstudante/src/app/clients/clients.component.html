@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-8 m-auto">
+    <form [formGroup]="formGroupClient">
+    <div class="mb-3">
+      <div class="display-6 text-center">
+        Cadastro De Clientes
+      </div>
+    </div>
+      <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nome: </label>
+      <input type="text" formControlName="name" class="form-control" id="name" placeholder="Nome">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email: </label>
+      <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+    </div>
+    <div class="mb-3 d-flex justify-content-end">
+      <button class="btn btn-success me-2" title="Salvar" (click)="save()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="white" viewBox="0 0 448 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M433.941 129.941l-83.882-83.882A48 48 0 0 0 316.118 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V163.882a48 48 0 0 0-14.059-33.941zM224 416c-35.346 0-64-28.654-64-64 0-35.346 28.654-64 64-64s64 28.654 64 64c0 35.346-28.654 64-64 64zm96-304.52V212c0 6.627-5.373 12-12 12H76c-6.627 0-12-5.373-12-12V108c0-6.627 5.373-12 12-12h228.52c3.183 0 6.235 1.264 8.485 3.515l3.48 3.48A11.996 11.996 0 0 1 320 111.48z"/></svg>
+      </button>
+      <button class="btn btn-success" title="Limpar Valores" (click)="clean()">
+        <svg  xmlns="http://www.w3.org/2000/svg" width="20" fill="white" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M566.6 54.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192-34.7-34.7c-4.2-4.2-10-6.6-16-6.6c-12.5 0-22.6 10.1-22.6 22.6v29.1L364.3 320h29.1c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16l-34.7-34.7 192-192zM341.1 353.4L222.6 234.9c-42.7-3.7-85.2 11.7-115.8 42.3l-8 8C76.5 307.5 64 337.7 64 369.2c0 6.8 7.1 11.2 13.2 8.2l51.1-25.5c5-2.5 9.5 4.1 5.4 7.9L7.3 473.4C2.7 477.6 0 483.6 0 489.9C0 502.1 9.9 512 22.1 512l173.3 0c38.8 0 75.9-15.4 103.4-42.8c30.6-30.6 45.9-73.1 42.3-115.8z"/></svg>
+      </button>
+    </div>
+  </form>
+  </div>
+</div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of client">
+        <th scope="row">{{client.id}}</th>
+        <td>{{client.name}}</td>
+        <td>{{client.email}}</td>
+        <td>
+          <button class="btn btn-primary me-2" title="Editar" (click)="edit(client)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+          </svg></button>
+          <button class="btn btn-danger" title="Excluir" (click)="delete(client)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+              <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+            </svg>
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
