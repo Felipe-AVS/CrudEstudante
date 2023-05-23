@@ -1,0 +1,57 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Roberto",
+      "email": "Roberto.rober@gmail.com",
+      "phone": "8912385123",
+      "company": "Masculino",
+      "interests1": "",
+      "interests2": "",
+      "interests3": true
+    },
+    {
+      "id": 2,
+      "name": "Rafaela",
+      "email": "Rafa@email.com",
+      "phone": "972153801523",
+      "company": "Feminino",
+      "interests1": true,
+      "interests2": true,
+      "interests3": null
+    },
+    {
+      "id": 3,
+      "name": "Brenda",
+      "email": "brenda@email.com",
+      "phone": "0816234213",
+      "company": "Feminino",
+      "interests1": true,
+      "interests2": true,
+      "interests3": true
+    }
+  ],
+  "supplier": [
+    {
+      "id": 1,
+      "name": "Logitech",
+      "email": "Logitech@logitech.com",
+      "phone": "16237812534217",
+      "company": "Computadores"
+    },
+    {
+      "id": 2,
+      "name": "GigaLuz",
+      "email": "GigLuz@gigLuz.com",
+      "phone": "986534064",
+      "company": "Eqp. Eletrônico"
+    },
+    {
+      "id": 3,
+      "name": "Central Gamer",
+      "email": "central@gamer.com",
+      "phone": "7341570340",
+      "company": "Chipsets"
+    }
+  ]
+}

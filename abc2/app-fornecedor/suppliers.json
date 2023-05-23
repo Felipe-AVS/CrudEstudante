@@ -1,0 +1,25 @@
+{
+    "suppliers": [
+      {
+        "id": 1,
+        "name": "Jorge",
+        "email": "Jorge@email.com",
+        "phone": "123456789",
+        "company": "Empresa Real 123"
+      },
+      {
+        "id": 2,
+        "name": "Alexandre",
+        "email": "Alexandre@email.com",
+        "phone": "987654321",
+        "company": "Empresa Real 321"
+      },
+      {
+        "id": 3,
+        "name": "Rafaela",
+        "email": "Rafaela@email.com",
+        "phone": "456789321",
+        "company": "Empresa Real 1"
+      }
+    ]
+  }
